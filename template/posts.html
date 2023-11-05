@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Posts{% endblock %}
+{% block content %}
+   
+<div class="container">
+    <div class="row">
+        <div class="col col-sm-12 col-md-12 col-lg-8">
+            <h3>{{ posts.title}}</h3>
+            
+            <img src="/media/{{posts.image}}" class="img"  alt="">
+            </br>
+            <p>
+                {{posts.post_des|safe}}
+            </p>
+        </div>
+        <div class="col col-sm-6 col-md-6 col-lg-4">
+            {% for cat in cats %}
+           <div class="card items">
+
+         <div class="img-container">
+            <img src="/media/{{cat.image}}" class="images2" alt="">
+         </div>
+         <div class="card-content ">
+            <div class="card-title mt10 ">
+                <h2>{{cat.title}}</h2>
+            </div>
+            <div class="card-des mt10">
+                {{cat.description}}
+            </div>
+
+            <div class="container mt30">
+                <a href="/category/{{cat.url}}" class="btn btn-primary">View</a>
+             </div>
+    
+         </div>
+        
+    </div>
+
+    {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to blog{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h3>{{cat.title}}</h3>
+    <div class="col img4">
+        <img src="/media/{{cat.image}}" alt="">
+    </div>
+    <div class="collection ">
+        {% for p in posts%}
+        <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

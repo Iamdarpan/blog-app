@@ -1,0 +1,41 @@
+.bg-primary{
+   background-color: cornflowerblue;
+}
+
+.mt20{
+   margin-top: 2rem;
+   margin-bottom: 8rem;
+}
+.mt30{
+   margin-top: 1rem;
+   text-align: center;
+   margin-bottom: 1rem;
+}
+.item{
+   margin-left: 10px;
+}
+.mt10{
+   margin-left: 1rem;
+}
+.image{
+   margin-top: 2rem;
+   width: 20rem;
+   border-radius: 2rem;
+}
+.img{
+   width: 50rem;
+}
+.images{
+   width: 20rem;
+   height: 15rem;
+}
+.images2{
+   width: 26rem;
+}
+.items{
+   margin-top: 1rem;
+}
+.img4{
+   width: 40rem;
+  
+}

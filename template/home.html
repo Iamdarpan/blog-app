@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to blog{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="owl-carousel">
+    {% for cat in cats %}
+    <div class="card item">
+
+         <div class="img-container">
+            <img src="/media/{{cat.image}}" class="images" alt="">
+         </div>
+         <div class="card-content ">
+            <div class="card-title mt10 ">
+                <h2>{{cat.title}}</h2>
+            </div>
+            <div class="card-des mt10">
+                {{cat.description}}
+            </div>
+
+            <div class="container mt30">
+                <a href="/category/{{cat.url}}" class="btn btn-primary">View</a>
+             </div>
+    
+         </div>
+        
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            {% for p in posts %}
+            <div class="row">
+
+               <div class="col-12 col-md-12 col-lg-8 ">
+                  {{p.post_des |truncatewords:60 |safe }}
+            
+                     <div class="mt20">
+                        <a href="/blog/{{p.url}}" class="btn btn-primary">Read More..</a>
+                     </div>
+                </div>  
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <img src="/media/{{p.image}}"   class="image"    alt="">
+                </div>
+
+            </div> 
+            {% endfor %}
+
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
